@@ -18,6 +18,8 @@ Requires desktop Excel on 64-bit Windows, the matching .NET 10 Windows Desktop R
 ## Included
 
 - Automatic Ollama connection status and model management.
+- Help → Diagnostics checks the connection, version and local model, with an optional response test and a copyable report without private content.
+- Settings → Advanced offers a local Ollama address, Test connection and Restore default.
 - Streaming chat, Markdown formatting, saved conversations and compact worksheet attachments.
 - `XLLAMA.PROMPT`, `XLLAMA.EXTRACT`, and Pro `XLLAMA.STREAM` formulas.
 - Free: **10 chat responses per day** and **5 XLlama formula cells per workbook**. The chat shows your remaining allowance. A request that produces no answer does not use a response; stopping after answer text appears counts once.
