@@ -18,6 +18,7 @@ Requires desktop Excel on 64-bit Windows, the matching .NET 10 Windows Desktop R
 ## Included
 
 - Automatic Ollama connection status and model management.
+- Modern dropdowns and a branded installer icon. Product navigation uses managed redirects.
 - Help → Diagnostics checks the connection, version and local model, with an optional response test and a copyable report without private content.
 - Settings → Advanced offers a local Ollama address, Test connection and Restore default.
 - Streaming chat, Markdown formatting, saved conversations and compact worksheet attachments.
