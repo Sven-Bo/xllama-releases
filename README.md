@@ -28,7 +28,7 @@ Inference runs through local Ollama. Model downloads require internet access. Se
 
 **1.0.0 is the first public release. The installer is unsigned**, so Windows or company security policies may block it.
 
-**Paid activation is awaiting a required licensing-server update.** Free mode can be tested now; this release is not yet verified for paid customer rollout. See the release notes for the tested scope.
+Activate Pro with an existing active XLlama license key in Settings. Activation progress and results appear beside the key. See the release notes for the tested scope.
 
 ## Update and uninstall
 
