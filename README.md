@@ -1,42 +1,42 @@
 # XLlama
 
-Local AI for Microsoft Excel on Windows, powered by Ollama.
+Local AI chat and worksheet formulas for Microsoft Excel on Windows, powered by Ollama.
 
-**[Download XLlama for Windows](https://github.com/Sven-Bo/xllama-releases/releases/latest/download/XLlama-Setup.exe)**
+## Downloads
 
-This repository contains official installers and release notes. Application source code is not published here.
+- **[XLlama Windows installer](https://pythonandvba.com/excel-xllama-add-in-download)** — recommended for most users.
+- **[IT deployment ZIP](https://pythonandvba.com/excel-xllama-add-in-it-download)** — compiled add-in files and PowerShell deployment scripts for administrators.
+- [Getting started](https://pythonandvba.com/go/excel-xllama-add-in-getting-started)
+- [IT deployment guide](https://pythonandvba.com/docs/xllama-add-in/guides/xllama-add-in-it-deployment/)
+
+Both downloads are attached to the [latest release](https://github.com/Sven-Bo/xllama-releases/releases/latest). The redirected download links stay the same for future releases.
 
 ## Install
 
-1. Download `XLlama-Setup.exe` from the link above.
-2. Save your work and close Excel.
-3. Run setup and follow its instructions. Setup checks the required components and provides download links if any are missing.
-4. Open Excel and select **XLlama** in the ribbon. Start Ollama and choose or download a local model in XLlama.
+Save your work and close Excel. Run `XLlama-Setup.exe`, then reopen Excel and select **XLlama** in the ribbon. Setup checks the required components. Start Ollama and choose or download a local model in XLlama.
 
-Requires desktop Excel on 64-bit Windows, the matching .NET 10 Windows Desktop Runtime, WebView2, and [Ollama](https://ollama.com/download/windows). Both 32-bit and 64-bit Excel payloads are included; native ARM64 Excel, Mac, and Excel for the web are not supported. Live Excel verification has covered 64-bit Excel.
+IT administrators can extract `XLlama-IT-Deployment.zip` and run `Deploy-XLlama.ps1 -Action Install` as the intended Windows user in 64-bit Windows PowerShell 5.1. SYSTEM deployment is refused. Follow the included README for prerequisites, updates, detection and removal. Do not register the EXE and IT editions for the same user.
 
-## Included
+Requires desktop Excel 2016 or newer on 64-bit Windows, the matching .NET 10 Desktop Runtime, WebView2, and Ollama. The bundle contains x86/x64 Excel payloads; actual Excel testing has covered 64-bit Excel. EXTRACT requires dynamic arrays. Native ARM64 Excel, Mac and Excel for the web are unsupported.
 
-- Automatic Ollama connection status and model management.
-- Modern dropdowns and a branded installer icon. Product navigation uses managed redirects.
-- Help → Diagnostics checks the connection, version and local model, with an optional response test and a copyable report without private content.
-- Settings → Advanced offers a local Ollama address, Test connection and Restore default.
-- Streaming chat, Markdown formatting, saved conversations and compact worksheet attachments.
-- `XLLAMA.PROMPT`, `XLLAMA.EXTRACT`, and Pro `XLLAMA.STREAM` formulas.
-- Free: **10 chat responses per day** and **5 XLlama formula cells per workbook**. The chat shows your remaining allowance. A request that produces no answer does not use a response; stopping after answer text appears counts once.
+## Features
 
-Inference runs through local Ollama. Model downloads require internet access. Selected worksheet data can be retained in your saved chats on your computer.
+- Local Ollama chat, streamed Markdown answers and saved conversations.
+- Compact spreadsheet attachments, including separate selected ranges.
+- `XLLAMA.PROMPT` and `XLLAMA.EXTRACT` worksheet formulas.
+- Connection status, model management and Help → Diagnostics.
+- Free: 10 chat responses per day and five formula cells per workbook. Optional Pro licensing unlocks unlimited chat and formulas, plus conversion to values.
 
-## Release status
+## Updates and removal
 
-**1.0.0 is the first public release. The installer is unsigned**, so Windows or company security policies may block it.
+Close Excel before updating or uninstalling. Most users update with the latest EXE installer. IT-managed users should receive the next ZIP from their administrator.
 
-Activate Pro with an existing active XLlama license key in Settings. Activation progress and results appear beside the key. See the release notes for the tested scope.
+Remove **XLlama** or **XLlama (IT deployment)** through Windows Settings → Apps → Installed apps. The ZIP also includes `Deploy-XLlama.ps1 -Action Uninstall`. Saved chats, settings, license and usage records remain in place, along with Ollama and its models.
 
-## Update and uninstall
+## Distribution and source visibility
 
-The download link above stays the same for future releases. Save and close Excel, then run the new installer to update. Saved conversations and settings are preserved.
+This repository contains distribution information, not the application source project. GitHub's automatic **Source code** archives contain this release repository's contents; the C# application source is not included.
 
-To uninstall, close Excel and go to **Windows Settings → Apps → Installed apps → XLlama → Uninstall**. Uninstall preserves your local chats, settings and license/usage records, along with Ollama and its models.
+Downloads contain compiled XLL/DLL files and the interface assets needed to run XLlama. IT deployment scripts and interface HTML/CSS/JavaScript are readable. Compiled .NET assemblies can be decompiled; neither packaging format guarantees source secrecy. Developer credentials and customer data are not included.
 
-The installer checksum is provided as `SHA256SUMS.txt` in each release. A checksum verifies file integrity; it is not a publisher signature.
+Version **1.0.0** is unsigned. Windows and company policies may block scripts or add-ins; a ZIP does not bypass those rules. `SHA256SUMS.txt` on the release verifies download integrity, not publisher identity. See release notes for the tested scope.
