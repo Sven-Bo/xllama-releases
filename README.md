@@ -4,8 +4,8 @@ Local AI chat and worksheet formulas for Microsoft Excel on Windows, powered by 
 
 ## Downloads
 
-- **[XLlama Windows installer](https://pythonandvba.com/excel-xllama-add-in-download)** — recommended for most users.
-- **[IT deployment ZIP](https://pythonandvba.com/excel-xllama-add-in-it-download)** — compiled add-in files and PowerShell deployment scripts for administrators.
+- **[XLlama Windows installer](https://pythonandvba.com/go/excel-xllama-add-in-download)** — recommended for most users.
+- **[IT deployment ZIP](https://pythonandvba.com/go/excel-xllama-add-in-it-download)** — compiled add-in files and PowerShell deployment scripts for administrators.
 - [Getting started](https://pythonandvba.com/go/excel-xllama-add-in-getting-started)
 - [IT deployment guide](https://pythonandvba.com/docs/xllama-add-in/guides/xllama-add-in-it-deployment/)
 
